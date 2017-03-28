@@ -1,0 +1,25 @@
+{
+  "family": "test",
+  "containerDefinitions": [
+    {
+      "name": "test",
+      "image": "condenastbritain/test:{{ tag }}",
+      "memoryReservation": 200,
+      "memory": 400,
+      "disableNetworking": false,
+      "essential": true,
+      "environment": [],
+      "readonlyRootFilesystem": false,
+      "cpu": 248,
+      "privileged": false,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "test",
+          "awslogs-region": "eu-west-1",
+          "awslogs-stream-prefix": "test"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "family": "alerts-api",
+  "containerDefinitions": [
+    {
+      "name": "alerts-api",
+      "image": "condenastbritain/alerts-api:{{ tag }}",
+      "memoryReservation": 200,
+      "memory": 400,
+      "disableNetworking": false,
+      "essential": true,
+      "environment": [],
+      "readonlyRootFilesystem": false,
+      "cpu": 248,
+      "privileged": false,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "alerts-api",
+          "awslogs-region": "eu-west-1",
+          "awslogs-stream-prefix": "alerts-api"
+        }
+      }
+    }
+  ]
+}
